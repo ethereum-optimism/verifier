@@ -1,0 +1,53 @@
+version: "3"
+
+services:
+
+  verifier:
+    image: ethereumoptimism/go-ethereum:latest
+    volumes:
+      - verifier:/root/.ethereum:rw
+    env_file:
+      - docker-compose.env
+    environment:
+      - ROLLUP_VERIFIER_ENABLE=true
+      - CHAIN_ID=420
+      - NETWORK_ID=420
+      - DEV=true
+      - DATADIR=/root/.ethereum
+      - RPC_ENABLE=true
+      - RPC_ADDR=verifier
+      - RPC_CORS_DOMAIN=*
+      - RPC_VHOSTS=*
+      - RPC_PORT=8045
+      - WS=true
+      - WS_ADDR=0.0.0.0
+      - WS_PORT=8046
+      - IPC_DISABLE=true
+      - TARGET_GAS_LIMIT=12000000
+      - RPC_API=eth,net,rollup,web3
+      - WS_API=eth,net,rollup,web3
+      - WS_ORIGINS=*
+      - GASPRICE=0
+      - NO_USB=true
+      - GCMODE=archive
+      - NO_DISCOVER=true
+      - USING_OVM=true
+      - ETH1_SYNC_SERVICE_ENABLE=true
+      - ETH1_CONFIRMATION_DEPTH=0
+    ports:
+      - 8045:8045
+      - 8046:8046
+
+  fraud_prover:
+    image: ethereumoptimism/fraud-prover:latest
+    env_file:
+      - docker-compose.env
+    environment:
+      - L2_NODE_WEB3_URL=http://kovan.optimism.io
+      - POLLING_INTERVAL=5000
+      - RUN_GAS_LIMIT=9500000
+      - FROM_L2_TRANSACTION_INDEX=0
+      - L2_BLOCK_OFFSET=1
+
+  volumes:
+    verifier:

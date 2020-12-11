@@ -1,0 +1,23 @@
+{
+  "name": "verifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "createKey.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethereum-optimism/verifier.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethereum-optimism/verifier/issues"
+  },
+  "homepage": "https://github.com/ethereum-optimism/verifier#readme",
+  "dependencies": {
+    "@ethersproject/wallet": "^5.0.9"
+  }
+}
