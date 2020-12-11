@@ -1,7 +1,6 @@
 version: "3"
 
 services:
-
   verifier:
     image: ethereumoptimism/go-ethereum:latest
     volumes:
@@ -49,5 +48,5 @@ services:
       - FROM_L2_TRANSACTION_INDEX=0
       - L2_BLOCK_OFFSET=1
 
-  volumes:
-    verifier:
+volumes:
+  verifier:

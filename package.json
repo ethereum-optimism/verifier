@@ -4,7 +4,8 @@
   "description": "",
   "main": "createKey.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create-key": "docker-compose -f docker-compose-create-key.yml up",
+    "start": "docker-compose up"
   },
   "repository": {
     "type": "git",
