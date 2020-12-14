@@ -9,7 +9,7 @@ services:
       - docker-compose.env
     environment:
       - ROLLUP_VERIFIER_ENABLE=true
-      - CHAIN_ID=420
+      - CHAIN_ID=69
       - NETWORK_ID=420
       - DEV=true
       - DATADIR=/root/.ethereum
@@ -33,6 +33,10 @@ services:
       - USING_OVM=true
       - ETH1_SYNC_SERVICE_ENABLE=true
       - ETH1_CONFIRMATION_DEPTH=0
+      - ETH1_CHAINID=42
+      - ETH1_NETWORKID=42
+      - ETH1_CTC_DEPLOYMENT_HEIGHT=22544064
+      - ETH1_ADDRESS_RESOLVER_ADDRESS=0xDDBfB20007D0dC444Cfe0dd0085BE10D6B63A650
     ports:
       - 8045:8045
       - 8046:8046
