@@ -10,7 +10,7 @@ services:
     environment:
       - ROLLUP_VERIFIER_ENABLE=true
       - CHAIN_ID=69
-      - NETWORK_ID=420
+      - NETWORK_ID=69
       - DEV=true
       - DATADIR=/root/.ethereum
       - RPC_ENABLE=true
@@ -22,7 +22,6 @@ services:
       - WS_ADDR=0.0.0.0
       - WS_PORT=8046
       - IPC_DISABLE=true
-      - TARGET_GAS_LIMIT=12000000
       - RPC_API=eth,net,rollup,web3
       - WS_API=eth,net,rollup,web3
       - WS_ORIGINS=*
