@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  keygen:
+    image: node:lts-alpine3.10
+    volumes:
+      - ./createKey.js:/usr/local/sbin/createKey.js
+      - ./node_modules:/usr/local/sbin/node_modules
+      - ./docker-compose.env:/usr/local/sbin/docker-compose.env
+    entrypoint: ["node", "/usr/local/sbin/createKey.js"]
