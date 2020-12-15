@@ -37,6 +37,8 @@ services:
       - ETH1_NETWORKID=42
       - ETH1_CTC_DEPLOYMENT_HEIGHT=22544064
       - ETH1_ADDRESS_RESOLVER_ADDRESS=0xDDBfB20007D0dC444Cfe0dd0085BE10D6B63A650
+      - ROLLUP_ADDRESS_MANAGER_OWNER_ADDRESS=0x4107438C1b1579f258AF9d1AC06194C4a0F55040
+      - TARGET_GAS_LIMIT=9000000
     ports:
       - 8045:8045
       - 8046:8046
@@ -46,7 +48,8 @@ services:
     env_file:
       - docker-compose.env
     environment:
-      - L2_NODE_WEB3_URL=http://kovan.optimism.io
+      - NO_TIMEOUT=true
+      - L2_NODE_WEB3_URL=http://verifier:8545
       - POLLING_INTERVAL=5000
       - RUN_GAS_LIMIT=9500000
       - FROM_L2_TRANSACTION_INDEX=0
