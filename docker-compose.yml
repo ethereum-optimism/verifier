@@ -51,7 +51,7 @@ services:
     environment:
       - NO_TIMEOUT=true
       - L2_NODE_WEB3_URL=http://verifier:8045
-      - L1_START_OFFSET=22544064
+      - L1_START_OFFSET=22610270
       - POLLING_INTERVAL=5000
       - RUN_GAS_LIMIT=9000000
       - FROM_L2_TRANSACTION_INDEX=1
