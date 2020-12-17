@@ -40,6 +40,7 @@ services:
       - ETH1_L1_CROSS_DOMAIN_MESSENGER_ADDRESS=0xF9b68f2E9c959072a3de899427ee9cA43E90c125
       - ROLLUP_ADDRESS_MANAGER_OWNER_ADDRESS=0x4107438C1b1579f258AF9d1AC06194C4a0F55040
       - ROLLUP_STATE_DUMP_PATH=https://raw.githubusercontent.com/ethereum-optimism/regenesis/master/kovan/1.json
+      - ROLLUP_DIFFDB_CACHE=1
     ports:
       - 8045:8045
       - 8046:8046
