@@ -4,7 +4,7 @@
   "description": "",
   "main": "createKey.js",
   "scripts": {
-    "create-key": "docker-compose -f docker-compose-create-key.yml up",
+    "create-key": "docker-compose -f docker-compose-create-key.yml run keygen",
     "start": "docker-compose pull && docker-compose up"
   },
   "repository": {
