@@ -5,7 +5,8 @@
   "main": "createKey.js",
   "scripts": {
     "create-key": "docker-compose -f docker-compose-create-key.yml run keygen",
-    "start": "docker-compose pull && docker-compose up"
+    "start": "docker-compose pull && docker-compose up",
+    "clean": "docker-compose down -v --remove-orphans"
   },
   "repository": {
     "type": "git",
