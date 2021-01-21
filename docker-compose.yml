@@ -2,7 +2,7 @@ version: "3"
 
 services:
   verifier:
-    image: ethereumoptimism/go-ethereum:latest
+    image: ethereumoptimism/go-ethereum:syncservice_ethsign-enum
     volumes:
       - verifier:/root/.ethereum:rw
     env_file:
